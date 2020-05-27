@@ -1,0 +1,15 @@
+def is_yixu1(s1, s2):#方法1
+    c1, c2 = s1.lower(), s2.lower()#转换大小写
+    lsts1 = list(s1)
+    lsts2 = list(s2)
+    lsts1.sort()#对字符串进行排序
+    lsts2.sort()
+    for i, char in enumerate(lsts1):
+        if lsts2[i] != char:
+            return False
+    return True
+    
+def is_yuxu2(s1,s2)#方法2
+    s3, s4 = s1.lower(), s2.lower()#转换大小写
+    if (set(s3) - set(s4)) == set():
+     return True
