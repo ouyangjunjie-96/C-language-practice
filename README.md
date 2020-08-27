@@ -1,0 +1,26 @@
+# -
+人不会因为逃避而强大
+def reverse_better(self, x: int) -> int:
+        y, res = abs(x), 0
+        # 则其数值范围为 [−2^31,  2^31 − 1]
+        boundry = (1<<31) -1 if x>0 else 1<<31
+        while y != 0:
+            res = res*10 +y%10
+            if res > boundry :
+                return 0
+            y //=10
+        return (res if x >0 
+            else -res)
+   class Solution:
+    def reverse(self, x: int) -> int:
+        s = str(x)
+        flag = 1
+        if s[0] == "-":
+            flag = -1
+            s = s[1:][::-1]
+        else:
+            s = s[::-1]
+        result = int(s)
+        return result * flag if -2 ** 31 <= result * flag <= 2 ** 31 - 1 else 0
+
+。         
