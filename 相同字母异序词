@@ -9,7 +9,7 @@ def is_yixu1(s1, s2):#方法1
             return False
     return True
     
-def is_yuxu2(s1,s2)#方法2
+def is_yixu2(s1,s2)#方法2
     s3, s4 = s1.lower(), s2.lower()#转换大小写
     if (set(s3) - set(s4)) == set():
      return True
