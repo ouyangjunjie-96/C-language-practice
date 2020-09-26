@@ -1,0 +1,18 @@
+#define LEN 128 //ASCII
+int lengthOfLongestSubstring(char * s) {
+    int hset[LEN]; //存储数组下标
+    int start = 0, count = 0, max = 0;
+    memset(hset, -1, sizeof(hset));
+    for (int i = 0; i < strlen(s); i++) {
+        if (hset[s[i]] >= start) {
+            start = hset[s[i]] + 1; // 更新为重复字符的下一个位置
+            count = i - start; // 重置计数器
+        }
+        hset[s[i]] = i;
+        count++;
+        if (count > max) {
+            max = count;
+        }
+    }
+    return max;
+}
