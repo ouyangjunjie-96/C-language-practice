@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<math.h>
+int MtoFeet(float Meter)
+{float feet;
+    feet=(int)(Meter/0.3048);
+ return(feet);
+}
+int MtoInch(float Meter)
+{float inch;
+    inch=(int)(Meter/0.3048*12)%12;
+ return(inch);
+}
+int main()
+{int centimeter;float Meter;
+scanf("%d",&centimeter);
+Meter=centimeter/100.0;
+MtoFeet(Meter);
+MtoInch(Meter);
+printf("%d %d",MtoFeet(Meter),MtoInch(Meter));
+}
