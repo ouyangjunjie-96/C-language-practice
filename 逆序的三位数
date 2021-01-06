@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+    int positivesequence,invertedorder=0;
+    scanf("%d",&positivesequence);
+    while(positivesequence>0)
+    {invertedorder=invertedorder*10;
+        invertedorder=positivesequence%10+invertedorder;
+        positivesequence=positivesequence/10;
+    }
+   printf("%d\n",invertedorder);
+}
