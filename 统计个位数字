@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int Count_Digit ( const int N, const int D );
+
+int main()
+{
+    int N, D;
+
+    scanf("%d %d", &N, &D);
+    printf("%d\n", Count_Digit(N, D));
+    return 0;
+}
+int Count_Digit ( const int N, const int D )
+{int num[10]={0},Postive;
+  if(N<0)
+{
+Postive=N*(-1);
+}
+else
+  Postive=N;
+  if(Postive==0&&D==0)
+  {num[D]++;
+  }
+ while(Postive>0)
+  {if(Postive%10==D)
+    {
+        num[D]++;
+    }
+   Postive=Postive/10;
+  }
+ return num[D];
+}
