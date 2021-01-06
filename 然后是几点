@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{int begintime,endtime,during;
+ scanf("%d %d",&begintime,&during);
+ int hour,minute;
+ hour=begintime/100;
+ minute=begintime%100;
+endtime=hour*60+minute+during;
+if(endtime<0)
+    endtime=endtime+24*60;
+hour=(endtime/60)%24;
+minute=endtime%60;
+ if(hour==0)
+     printf("0%d",minute);
+else
+{
+endtime=hour*100+minute;
+printf("%d",endtime);
+}
+
+}
