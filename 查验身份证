@@ -25,5 +25,16 @@ int main()
             }
           else
             {
+               if(change[last%11]!=str[17])
+                   {
+                     flag=false;
+                     printf("%s\n",str);
+                   }
+            }
      }
+if(flag==true)
+    { 
+       printf("All passed\n");
+    }
+ return 0;
 }
