@@ -1,4 +1,4 @@
-#include<cstdio.h>
+#include<cstdio>
 #include<cstring>
 int n,minLen=256,ans=0;
 char s[100][256];
@@ -8,7 +8,7 @@ int main()
   getchar();
   for(int i=0;i<n;i++)
     {
-      gets(s[i]);
+      fgets(s[i],256,stdin);
       int len=strlen(s[i]);
       if(len<minLen)
         {
