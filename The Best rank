@@ -26,7 +26,7 @@ int main()
     }
     for(now=0;now<4;now++)
       {
-        sort(stu,stu+n,cmp)
+        sort(stu,stu+n,cmp);
         Rank[stu[0].id][now]=1;
         for(int i=1;i<n;i++)
           {
