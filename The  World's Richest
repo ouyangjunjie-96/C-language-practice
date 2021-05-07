@@ -33,6 +33,23 @@ int main()
            Age[ps[i].age]++;
            valid[validNum++]=ps[i];
         }
-        
     }
+    int m,ageL,ageR;
+    for(int i=1;i<=k;i++)
+    {
+        scanf("%d%d%d",&m,&ageL,&ageR);
+        printf("Case #%d:\n",i);
+        int printNum=0;
+        for(int j=0;j<validNum&&printNum<m;j++)
+        {
+            if(valid[j].age>=ageL&&valid[j].age<=ageR)
+            {
+                printf("%s %d %d\n",valid[j].name,valid[j].age,valid[j].worths);
+                printNum++;
+            }
+        }
+        if(printNum==0)
+            printf("None\n");
+    }
+    return 0; 
 }
