@@ -22,7 +22,7 @@ int main()
         scanf("%s %s %d",stu[i].name,stu[i].id,&stu[i].grade);
     }
     scanf("%d%d",&left,&right);
-    sort(stu,stu+n,cmp)
+    sort(stu,stu+n,cmp);
     bool flag=false;
     for(int i=0;i<n;i++)
     {
