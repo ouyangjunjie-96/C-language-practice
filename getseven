@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<algorithm>
+#include<string.h>
+#include<math.h>
+int getseven(int a)
+{
+    int sum=0;
+     for(int i=1;i<=a;i++)
+    {
+        if(i%7==0)
+            sum++;
+       else
+       {
+           int k=i;
+           while(k>0)
+           {
+               if(k%10==7)
+               {
+                   sum++;
+                   break;
+               }
+               k=k/10;
+           }
+       
+       }
+    }
+    return sum;
+}
+    
+int main()
+{
+    int N1,N2,sum1,sum2;
+    scanf("%d%d",&N1,&N2);
+    sum1=getseven(N1);
+    sum2=getseven(N2);
+    printf("%d\n%d\n",sum1,sum2);
+    return 0;
+}
