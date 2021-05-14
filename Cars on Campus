@@ -45,8 +45,8 @@ int main()
         {
             valid[num++]=all[i];
             valid[num++]=all[i+1];
-            int intTime=all[i+1].time-all.[i].time;
-            if(parkTime.count(all.[i].id)==0)
+            int inTime=all[i+1].time-all[i].time;
+            if(parkTime.count(all[i].id)==0)
             {
                 parkTime[all[i].id]=0;
             }
