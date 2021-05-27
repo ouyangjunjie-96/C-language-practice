@@ -16,7 +16,7 @@ int binarySearch(int i,long long x)
         else
             r=mid;
     }
-    return 1;
+    return l;
 }
 int main()
 {
