@@ -1,6 +1,6 @@
 #include<cstdio>
 #include<algorithm>
-using namespce std;
+using namespace std;
 const int N=111;
 int origin[N],tempOri[N],changed[N];
 int n;
@@ -17,7 +17,7 @@ bool showArray(int A[])
     {
         printf("%d",A[i]);
         if(i<n-1)
-            printf(" ");
+            printf(",");
     }
     printf("\n");
     return 0;
@@ -29,17 +29,17 @@ bool insertSort()
     {
         if(i!=1&&isSame(tempOri,changed))
             flag=true;
-    }
-    int temp=tempOri[i],j=i;
-    while(j>0&&tempOri[j-1]>temp)
-    {
-        tempOri[j]=tempOri[j-1];
-        j--;
-    }
-    tempOri[j]=temp;
-    if(flag==true)
-    {
-        return true;
+        int temp=tempOri[i],j=i;
+        while(j>0&&tempOri[j-1]>temp)
+        {
+            tempOri[j]=tempOri[j-1];
+            j--;
+         }
+        tempOri[j]=temp;
+        if(flag==true)
+        {
+            return true;
+        }
     }
     return false;
 }
@@ -55,7 +55,6 @@ void mergeSort()
         if(flag==true)
         {
             showArray(tempOri);
-            return ;
         }
     }
 }
