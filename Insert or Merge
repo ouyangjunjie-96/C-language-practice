@@ -20,8 +20,9 @@ bool showArray(int A[])
             printf(" ");
     }
     printf("\n");
+    return 0;
 }
-bool insertsort()
+bool insertSort()
 {
     bool flag=false;
     for(int i=1;i<n;i++)
@@ -30,7 +31,7 @@ bool insertsort()
             flag=true;
     }
     int temp=tempOri[i],j=i;
-    while(j<0&&tempOri[j-1]>temp)
+    while(j>0&&tempOri[j-1]>temp)
     {
         tempOri[j]=tempOri[j-1];
         j--;
@@ -78,7 +79,7 @@ int main()
         printf("Merge Sort\n");
         for(int i=0;i<n;i++)
         {
-            tempOri[i]=origin[i]);
+            tempOri[i]=origin[i];
         }
         mergeSort();
         
