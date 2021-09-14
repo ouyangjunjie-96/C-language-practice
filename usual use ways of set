@@ -20,5 +20,16 @@ int main()
     {
         printf("%d ",*it);
     }
+    set<int>::iterator it=st.find(2);
+    printf("#%d\n",*it);
+    printf("@%d\n",*(st.find(3));
+    st.erase(st.find(5);
+    for(set<int>::iterator it=st.begin();it!=st.end();it++)
+    {
+        printf("*%d\n",*it);
+    }
+    printf("%d\n",st.size());
+    st.clear();
+    printf("%d\n",st.size());
     return 0;
 }
