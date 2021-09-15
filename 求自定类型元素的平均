@@ -18,10 +18,12 @@ int main ()
     return 0;
 }
 ElementType Average( ElementType S[], int N )
-{float SUM=0,AVE;int i;
-      for(i=0;i<N;i++)
-      {SUM+=S[i];
-       }
- AVE=SUM/N;
+{
+    float SUM=0,AVE;int i;
+    for(i=0;i<N;i++)
+    {
+        SUM+=S[i];
+    }
+    AVE=SUM/N;
     return(AVE);
 }
