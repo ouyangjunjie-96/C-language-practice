@@ -1,0 +1,43 @@
+map<typename1,typename2>mp;
+map<string,int>mp;
+map<set<int>,string>mp;
+#include<stdio.h>
+#include<map>
+using namespace std;
+int main()
+{
+    map<char,int>mp;
+    mp['c']=20;
+    mp['c']=30;
+    printf%d\n",mp['c']);
+    return 0;
+}
+map<typename1,typename2>::iterator it;
+#include<stdio.h>
+#include<map>
+using namespace std;
+int main()
+{
+    map<char,int>mp;
+    mp['m']=20;
+    mp['r']=30;
+    mp['a']=40;
+    for(map<char,int>::iterator it =mp.begin();it!=mp.end();it++)
+    {
+        printf("%c %d\n",it->first,it->second);
+    }
+    return 0;
+}
+#include<stdio.h>
+#include<map>
+using namespace std;
+int main()
+{
+    map<char,int>mp;
+    mp['a']=1;
+    mp['b']=2;
+    mp['c']=3;
+    map<char,int>::iterator  it=mp.find('b');
+    printf("%c %d\n",it->first,it->second);
+    return 0;
+}
