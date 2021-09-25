@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<queue>
+using namespace std;
+int main()
+{
+    priority_queue<int> q;
+    q.push(3);
+    q.push(4);
+    q.push(1);
+    printf("%d\n",q.pop());
+    return 0;
+}
+struct fruit
+{
+    string name;
+    int price;
+};
+struct fruit
+{
+    string name;
+    int price;
+    friend bool operator<fruit f1,fruit f2)
+    {
+         return f1.price<f2.price;
+    }
+};
