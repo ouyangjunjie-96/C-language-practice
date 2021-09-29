@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<algorithm>
+using namespace std;
+int main()
+{
+    int a[10]={1,2,2,3,3,3,5,5,5,5};
+    int *lowerPos=lower_bound(a,a+10,-1);
+    int *uuperPos=upper_bound(a,a+10,-1);
+    printf("%d,%d\n",lowerPos-a;upperPos-a);
+    //----------------------
+    int *lowerPos=lower_bound(a,a+10,1);
+    int *uuperPos=upper_bound(a,a+10,1);
+    printf("%d,%d\n",lowerPos-a;upperPos-a);
+    //----------------------
+    int *lowerPos=lower_bound(a,a+10,3);
+    int *uuperPos=upper_bound(a,a+10,3);
+    printf("%d,%d\n",lowerPos-a;upperPos-a);
+    //------------------------
+    int *lowerPos=lower_bound(a,a+10,4);
+    int *uuperPos=upper_bound(a,a+10,4);
+    printf("%d,%d\n",lowerPos-a;upperPos-a);
+    int *lowerPos=lower_bound(a,a+10,6);
+    int *uuperPos=upper_bound(a,a+10,6);
+    printf("%d,%d\n",lowerPos-a;upperPos-a);
+}
