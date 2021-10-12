@@ -30,3 +30,36 @@ int main()
     printf("%d\n",maxValue);
     return 0;
 }
+void DFS(int index,int sumW,int sumC)
+{
+    if(index==n)
+    {
+        return ;
+    }
+    DFS(index+1,sumW,sumC);
+    if(sumW+w[index]<=V)
+    {
+        if(sumC+c[index]>ans)
+        {
+            ans=sumC+c[index];
+        }
+        DFS(index+1,sumW+w[index],sumC+c[index]);
+    }
+}
+int n,k,x,maxSumSqu=-1,A[maxn];
+vector<int>temp,ans;
+void DFS(int index,int nowK,int sum,int sumSqu)
+{
+   if(nowK==k&&sum==x)
+   {
+       if(sumSqu>maxSumSqu)
+       {
+           maxSumSqu=sumSqu;
+           ans=temp;
+       }
+       return ;
+   }
+   if(index==n||nowK>k||sum>x)
+       return;\
+   
+}
