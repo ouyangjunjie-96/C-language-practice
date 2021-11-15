@@ -52,3 +52,14 @@ node *Create(int data[],int n)
     }
     return root;
 }
+//precede order
+void preorder(node *root)
+{
+    if(root==NULL)
+    {
+        return;
+    }
+    printf("%d\n",root->data);
+    preorder(root->lchild);
+    preorder(root->rchild);
+}
