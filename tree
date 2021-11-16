@@ -63,3 +63,25 @@ void preorder(node *root)
     preorder(root->lchild);
     preorder(root->rchild);
 }
+//inorder
+void inorder(node *root)
+{
+    if(root==NULL)
+    {
+        return;
+    }
+    inorder(root->lchild);
+    printf("%d\n",root->data);
+    inorder(root->rchild);
+}
+// post prder
+void postorder(node *root)
+{
+    if(root==NULL)
+    {
+        return;
+    }
+    postorder(root->lchild);
+    postorder(root->rchild);
+    printf("%d\n",root->data);
+}
