@@ -1,0 +1,58 @@
+void search(node *root,int x)
+{
+  if(root==NULL)
+  {
+    printf("search failed\n");
+    return;
+  }
+  if(x==root->data)
+  {
+    printf("%d\n",root->data);
+  }
+  else if(x<root-data)
+  {
+    search(root->lchild,x);
+  }
+  else
+  {
+    search(root->rchild,x);
+  }
+}
+
+//left Rotation)
+void L(node *&root)
+{
+  node *temp=root->rchild;
+  root->rchild=temp->lchild;
+  temp->lchild=root;
+  updateHeight(root);
+  updateHeight(temp);
+  root=temp;
+}
+
+//right rotation
+void R(node *&root)
+{
+  node *temp=root->lchild;
+  root->lchild=temp->rchild;
+  temp->rchild=root;
+  updateHeight(root);
+  updateHeight(temp);
+  root=temp;
+}
+void insert(node *&root,int v)
+{
+  if(root==NULL)
+  {
+    root=newNode(v);
+    return;
+  }
+  if(v<root->v)
+  {
+    insert(root->lchild,v);
+  }
+  else
+  {
+    insert(root->rchild,v);
+  }
+}
